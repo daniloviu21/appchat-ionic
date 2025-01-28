@@ -25,3 +25,32 @@
 #container a {
   text-decoration: none;
 }
+
+ion-icon {
+  color: #fcfcfc;
+  font-size: 25px;
+}
+
+.circleicon {
+  color: #21c064;
+  font-size: 35px;
+}
+
+.titlechats {
+  font-weight: bold;
+  margin: 0px 12px 0px 12px;
+}
+
+ion-toolbar {
+  background-color: #0a0a0a;
+  --border-width: 0;
+  --ion-border-color: transparent;
+}
+
+ion-content, ion-item {
+  --background: #0a0a0a;
+}
+
+ion-content {
+  --padding-bottom: 56px;
+}

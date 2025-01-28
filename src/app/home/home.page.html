@@ -1,20 +1,59 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button class="buttonfill" (click)="presentPopover($event)">
+        <ion-icon ios="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+      <ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+        <ng-template>
+          <ion-content class="ion-padding">Hello World!</ion-content>
+        </ng-template>
+      </ion-popover>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button class="buttonfill">
+        <ion-icon ios="camera"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon class="circleicon" ios="add-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1 class="titlechats">Chats</h1>
+  <ion-searchbar search-icon="cube" placeholder=" Preguntar a Meta AI o buscar" show-cancel-button="focus"></ion-searchbar>
+  <ion-list>
+    <app-item-chat *ngFor="let dsm of chats" [avatar]="dsm.avatar" [name]="dsm.name" [message]="dsm.message" [time]="dsm.time"></app-item-chat>
+  </ion-list>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <img src="/chat/src/assets/icon/meta.png" alt="a">
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button routerLink="/novedades">
+    <ion-icon name="sparkles-outline"></ion-icon>
+    <ion-label>Novedades</ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="llamadas">
+    <ion-icon name="call-outline"></ion-icon>
+    <ion-label>Llamadas</ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="comunidades">
+    <ion-icon name="people-outline"></ion-icon>
+    <ion-label>Comunidades</ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="chats">
+    <ion-icon name="chatbubble-outline"></ion-icon>
+    <ion-label>Chats</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/ajustes">
+    <ion-icon name="settings-outline"></ion-icon>
+    <ion-label>Ajustes</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>

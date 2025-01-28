@@ -1,0 +1,23 @@
+<!-- <ion-item [button]="true">
+  <ion-avatar haria-hidden="true" slot="start">
+    <img [alt]="dsm.name" [src]="dsm.avatar" />
+  </ion-avatar>
+  <ion-label>
+    <h3>{{dsm.name}}</h3>
+    <p>{{dsm.message}}</p>
+  </ion-label>
+  <div class="metadata-end-wrapper" slot="end">
+    <ion-note color="medium">{{dsm.time}}</ion-note>
+  </div>
+</ion-item> -->
+
+<ion-item lines="full">
+  <ion-avatar slot="start">
+    <img [alt]="name" [src]="avatar" />
+  </ion-avatar>
+  <ion-label>
+    <h3>{{name}}</h3>
+    <p>{{message}}</p>
+  </ion-label>
+  <p class="chat-time">{{time}}</p>
+</ion-item>

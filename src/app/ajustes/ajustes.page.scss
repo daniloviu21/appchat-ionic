@@ -1,0 +1,18 @@
+.titlesettings {
+    font-weight: bold;
+    margin: 0px 12px 0px 19px;
+}
+
+ion-toolbar {
+    background-color: #0a0a0a;
+    --border-width: 0;
+    --ion-border-color: transparent;
+}
+
+ion-content, ion-item {
+    --background: #0a0a0a;
+}
+
+a{
+    text-decoration: none;
+}

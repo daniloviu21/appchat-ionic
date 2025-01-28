@@ -1,0 +1,23 @@
+ion-toolbar {
+    background-color: #0a0a0a;
+    --border-width: 0;
+    --ion-border-color: transparent;
+}
+
+ion-content, ion-item {
+    --background: #0a0a0a;
+}
+
+ion-icon{
+  color: #fcfcfc;
+  font-size: 25px;
+}
+
+.inputedit, .labeledit{
+  margin: 0px 15px 0px 15px;
+}
+
+.labeledit{
+    font-weight: bold;
+    color: rgb(158, 158, 158);
+}

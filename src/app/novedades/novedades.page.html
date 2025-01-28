@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon ios="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<h1>Novedades</h1>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button routerLink="/novedades">
+    <ion-icon name="sparkles-outline"></ion-icon>
+    <ion-label>Novedades</ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="llamadas">
+    <ion-icon name="call-outline"></ion-icon>
+    <ion-label>Llamadas</ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="comunidades">
+    <ion-icon name="people-outline"></ion-icon>
+    <ion-label>Comunidades</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/home">
+    <ion-icon name="chatbubble-outline"></ion-icon>
+    <ion-label>Chats</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/ajustes">
+    <ion-icon name="settings-outline"></ion-icon>
+    <ion-label>Ajustes</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>

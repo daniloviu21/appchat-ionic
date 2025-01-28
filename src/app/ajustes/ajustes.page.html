@@ -1,0 +1,108 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1 class="titlesettings">Ajustes</h1>
+  <ion-searchbar search-icon="search" placeholder=" Buscar" show-cancel-button="focus"></ion-searchbar>
+  
+  <ion-card>
+    <a routerLink="/editarperfil">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <ion-list>
+          <ion-label>Daniel Lopez</ion-label>
+          <ion-label>Tsss...</ion-label>
+        </ion-list>
+        <ion-icon name="qr-code-outline" slot="end"></ion-icon>
+      </ion-item>
+    </a>
+    <ion-item button>
+      <ion-icon name="happy-outline" slot="start"></ion-icon>
+      <ion-label>Avatar</ion-label>
+    </ion-item>
+  </ion-card>
+  
+  <ion-card>
+    <ion-list class="settings-list">
+      <ion-item button>
+        <ion-icon name="list-outline" slot="start"></ion-icon>
+        <ion-label>Listas</ion-label>
+      </ion-item>
+      <ion-item button>
+        <ion-icon name="megaphone-outline" slot="start"></ion-icon>
+        <ion-label>Mensajes de difusión</ion-label>
+      </ion-item>
+      <ion-item button>
+        <ion-icon name="star-outline" slot="start"></ion-icon>
+        <ion-label>Mensajes destacados</ion-label>
+      </ion-item>
+      <ion-item button>
+        <ion-icon name="laptop-outline" slot="start"></ion-icon>
+        <ion-label>Dispositivos vinculados</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+<ion-card>
+  <ion-list class="settings-list">
+    <ion-item button>
+      <ion-icon name="key-outline" slot="start"></ion-icon>
+      <ion-label>Cuenta</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-label>Privacidad</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="chatbubble-outline" slot="start"></ion-icon>
+      <ion-label>Chats</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="notifications-outline" slot="start"></ion-icon>
+      <ion-label>Notificaciones</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="shuffle-outline" slot="start"></ion-icon>
+      <ion-label>Almacenamiento y datos</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-card>
+<ion-card>
+  <ion-list class="settings-list">
+    <ion-item button>
+      <ion-icon name="help-circle-outline" slot="start"></ion-icon>
+      <ion-label>Ayuda</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="people-outline" slot="start"></ion-icon>
+      <ion-label>Invita amigos</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-card>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button routerLink="/novedades">
+    <ion-icon name="sparkles-outline"></ion-icon>
+    <ion-label>Novedades</ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="llamadas">
+    <ion-icon name="call-outline"></ion-icon>
+    <ion-label>Llamadas</ion-label>
+  </ion-tab-button>
+  <ion-tab-button tab="comunidades">
+    <ion-icon name="people-outline"></ion-icon>
+    <ion-label>Comunidades</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/home">
+    <ion-icon name="chatbubble-outline"></ion-icon>
+    <ion-label>Chats</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/ajustes">
+    <ion-icon name="settings-outline"></ion-icon>
+    <ion-label>Ajustes</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
